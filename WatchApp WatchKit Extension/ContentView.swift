@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var email = ""
+    @State var password = ""
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+        VStack {
+            TextField("vasya@mail.com", text: $email)
+            SecureField("******", text: $password)
+            Button(action: {
+                
+            }, label: {
+                Text("Войти")
+            })
+        }.frame(width: 190)
     }
 }
 

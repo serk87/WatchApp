@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -157,6 +157,10 @@
 				D274D62D266CB29400ACC112 /* PBXTargetDependency */,
 			);
 			name = WatchApp;
+			packageProductDependencies = (
+				D274D65D266CB52300ACC112 /* Alamofire */,
+				D274D662266CB54300ACC112 /* SwiftyJSON */,
+			);
 			productName = WatchApp;
 			productReference = D274D626266CB29400ACC112 /* WatchApp.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
@@ -224,6 +228,10 @@
 				Base,
 			);
 			mainGroup = D274D61F266CB29400ACC112;
+			packageReferences = (
+				D274D65C266CB52300ACC112 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D274D661266CB54300ACC112 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = D274D627266CB29400ACC112 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -553,6 +561,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D274D65C266CB52300ACC112 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		D274D661266CB54300ACC112 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D274D65D266CB52300ACC112 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D274D65C266CB52300ACC112 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D274D662266CB54300ACC112 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D274D661266CB54300ACC112 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D274D620266CB29400ACC112 /* Project object */;
 }
