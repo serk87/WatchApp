@@ -16,7 +16,6 @@ struct ContentView: View {
     @State var alertMessage = ""
     @StateObject var userObject = UserObject()
     var body: some View {
-        
         VStack {
             TextField("vasya@mail.com", text: $email)
             SecureField("******", text: $password)
