@@ -17,6 +17,10 @@
 		D274D644266CB29800ACC112 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274D643266CB29800ACC112 /* ComplicationController.swift */; };
 		D274D646266CB29900ACC112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D274D645266CB29900ACC112 /* Assets.xcassets */; };
 		D274D649266CB29900ACC112 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D274D648266CB29900ACC112 /* Preview Assets.xcassets */; };
+		D274D667266CB84A00ACC112 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274D666266CB84A00ACC112 /* UserObject.swift */; };
+		D274D675266CB8F300ACC112 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D274D674266CB8F300ACC112 /* SwiftyJSON */; };
+		D274D67B266CB91F00ACC112 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D274D67A266CB91F00ACC112 /* Alamofire */; };
+		D274D681266CB99000ACC112 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D274D680266CB99000ACC112 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,7 @@
 		D274D648266CB29900ACC112 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D274D64A266CB29900ACC112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D274D64B266CB29900ACC112 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D274D666266CB84A00ACC112 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D274D681266CB99000ACC112 /* SDWebImageSwiftUI in Frameworks */,
+				D274D675266CB8F300ACC112 /* SwiftyJSON in Frameworks */,
+				D274D67B266CB91F00ACC112 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +130,7 @@
 			children = (
 				D274D63B266CB29800ACC112 /* WatchAppApp.swift */,
 				D274D63D266CB29800ACC112 /* ContentView.swift */,
+				D274D666266CB84A00ACC112 /* UserObject.swift */,
 				D274D63F266CB29800ACC112 /* NotificationController.swift */,
 				D274D641266CB29800ACC112 /* NotificationView.swift */,
 				D274D643266CB29800ACC112 /* ComplicationController.swift */,
@@ -158,8 +167,6 @@
 			);
 			name = WatchApp;
 			packageProductDependencies = (
-				D274D65D266CB52300ACC112 /* Alamofire */,
-				D274D662266CB54300ACC112 /* SwiftyJSON */,
 			);
 			productName = WatchApp;
 			productReference = D274D626266CB29400ACC112 /* WatchApp.app */;
@@ -178,6 +185,8 @@
 				D274D639266CB29800ACC112 /* PBXTargetDependency */,
 			);
 			name = "WatchApp WatchKit App";
+			packageProductDependencies = (
+			);
 			productName = "WatchApp WatchKit App";
 			productReference = D274D62A266CB29400ACC112 /* WatchApp WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
@@ -195,6 +204,11 @@
 			dependencies = (
 			);
 			name = "WatchApp WatchKit Extension";
+			packageProductDependencies = (
+				D274D674266CB8F300ACC112 /* SwiftyJSON */,
+				D274D67A266CB91F00ACC112 /* Alamofire */,
+				D274D680266CB99000ACC112 /* SDWebImageSwiftUI */,
+			);
 			productName = "WatchApp WatchKit Extension";
 			productReference = D274D636266CB29800ACC112 /* WatchApp WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -229,8 +243,9 @@
 			);
 			mainGroup = D274D61F266CB29400ACC112;
 			packageReferences = (
-				D274D65C266CB52300ACC112 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				D274D661266CB54300ACC112 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D274D673266CB8F300ACC112 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D274D679266CB91F00ACC112 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D274D67F266CB99000ACC112 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = D274D627266CB29400ACC112 /* Products */;
 			projectDirPath = "";
@@ -280,6 +295,7 @@
 				D274D644266CB29800ACC112 /* ComplicationController.swift in Sources */,
 				D274D63C266CB29800ACC112 /* WatchAppApp.swift in Sources */,
 				D274D642266CB29800ACC112 /* NotificationView.swift in Sources */,
+				D274D667266CB84A00ACC112 /* UserObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,15 +579,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D274D65C266CB52300ACC112 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.3;
-			};
-		};
-		D274D661266CB54300ACC112 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		D274D673266CB8F300ACC112 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
 			requirement = {
@@ -579,18 +587,39 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		D274D679266CB91F00ACC112 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		D274D67F266CB99000ACC112 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D274D65D266CB52300ACC112 /* Alamofire */ = {
+		D274D674266CB8F300ACC112 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D274D65C266CB52300ACC112 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = D274D673266CB8F300ACC112 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D274D67A266CB91F00ACC112 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D274D679266CB91F00ACC112 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		D274D662266CB54300ACC112 /* SwiftyJSON */ = {
+		D274D680266CB99000ACC112 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D274D661266CB54300ACC112 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
+			package = D274D67F266CB99000ACC112 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
