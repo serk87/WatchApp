@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @State var email = ""
     @State var password = ""
+    @State var showAlert = false
+    @State var alertMessage = ""
     @StateObject var userObject = UserObject()
     var body: some View {
         VStack {
@@ -21,13 +23,17 @@ struct ContentView: View {
                     if message == "Success" {
                         print(message)
                     } else {
-                        print(message)
+                        alertMessage = message
+                        showAlert = true
                     }
                 }
             }, label: {
                 Text("Войти")
             })
         }
+        .alert(isPresented: $showAlert, content: {
+            Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        })
     }
 }
 
