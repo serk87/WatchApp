@@ -20,7 +20,8 @@ class UserObject: ObservableObject {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                if let token = json["token"].string {
+                if let token = json["token"].int {
+                    print(token)
                     completionHandler!("Success")
                 }
             case .failure(let error):

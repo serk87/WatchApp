@@ -21,6 +21,7 @@
 		D274D675266CB8F300ACC112 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D274D674266CB8F300ACC112 /* SwiftyJSON */; };
 		D274D67B266CB91F00ACC112 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D274D67A266CB91F00ACC112 /* Alamofire */; };
 		D274D681266CB99000ACC112 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D274D680266CB99000ACC112 /* SDWebImageSwiftUI */; };
+		D274D686266CC1F900ACC112 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274D685266CC1F900ACC112 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		D274D64A266CB29900ACC112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D274D64B266CB29900ACC112 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		D274D666266CB84A00ACC112 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
+		D274D685266CC1F900ACC112 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				D274D63B266CB29800ACC112 /* WatchAppApp.swift */,
 				D274D63D266CB29800ACC112 /* ContentView.swift */,
+				D274D685266CC1F900ACC112 /* MainView.swift */,
 				D274D666266CB84A00ACC112 /* UserObject.swift */,
 				D274D63F266CB29800ACC112 /* NotificationController.swift */,
 				D274D641266CB29800ACC112 /* NotificationView.swift */,
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D274D640266CB29800ACC112 /* NotificationController.swift in Sources */,
+				D274D686266CC1F900ACC112 /* MainView.swift in Sources */,
 				D274D63E266CB29800ACC112 /* ContentView.swift in Sources */,
 				D274D644266CB29800ACC112 /* ComplicationController.swift in Sources */,
 				D274D63C266CB29800ACC112 /* WatchAppApp.swift in Sources */,
